@@ -78,15 +78,10 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
+      <img id="teaser" src="./static/images/teaser.png">
+        
+      </img>
+
     </div>
   </div>
 </section>
@@ -115,9 +110,9 @@
         <div class="content has-text-justified">
           <p>
             We capture the front part of the "Client's" body using two Kinect Azure cameras. For the client, we use an AR mirror to superimpose the virtual garment on its body. We use a TV screen (230cm x 130cm) in portrait mode. To send the client's physical data to the designer, first, we extract the RGB and Depth Camera data plus the skeleton Technical overview - Client side:
-data from the Kinects. We send the skeleton data as OSC messages (6-DOF float messages/joint). We use NDI to send the RGB/Depth camera data.
-            Technical overview - Designer side:
-The Designer uses a desktop computer with a drawing tablet and a pen. We use Unreal Engine (UE) to visualise the client's body. The skeleton data drives a skeletal mesh in UE. We use the RGB video as a background image and the depth data to provide correct occlusions and collisions between the garment and the client's body. The cloth simulation system in UE communicates with Marvelous Designer (MD), a software for cloth tailoring. In MD, the Designer can create new clothes (e.g. T-shirts, trousers) and edit them, including trimming and cutting. These changes automatically reflect in UE.
+data from the Kinects. We send the skeleton data as OSC messages (6-DOF float messages/joint). We use NDI to send the RGB/Depth camera data.<br>
+            Designer side:
+The Designer uses a desktop computer with a drawing tablet and a pen. We use Unreal Engine (UE) to visualise the client's body. The skeleton data drives a skeletal mesh in UE. We use the RGB video as a background image and the depth data to provide correct occlusions and collisions between the garment and the client's body. The cloth simulation system in UE communicates with Marvelous Designer (MD), a software for cloth tailoring. In MD, the Designer can create new clothes (e.g. T-shirts, trousers) and edit them, including trimming and cutting. These changes automatically reflect in UE.<br>
             Networking:
 To make a stable connection between the two remote desktop PCs we use a private VPN connection. On the client's side, we process the Kinect Azures' data in TouchDesigner. To effectively send the Kinects' data (Skeleton Data as OSC float messages; RGB Camera feed as 8-bit NDI stream; Depth Camera feed as 16-bit NDI stream), we use NDI Bridge for converting the NDI streams and achieve fast transferring speed (numbers in milliseconds).
           </p>
@@ -129,8 +124,11 @@ To make a stable connection between the two remote desktop PCs we use a private 
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <video id="teaser" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/rtl.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
         </div>
       </div>
     </div>
